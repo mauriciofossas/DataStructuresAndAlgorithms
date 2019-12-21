@@ -38,5 +38,35 @@ class DataStructuresTests {
 		int result = skyline.maxIncreaseKeepingSkyline(grid);
 		assertEquals(0, result);
 	}
+	@Test
+	void reverseInt1() {
+		reverseInteger reversed = new reverseInteger();
+		int result = reversed.reverse(100);
+		assertEquals(1, result);
+	}
+	@Test
+	void reverseInt2() {
+		reverseInteger reversed = new reverseInteger();
+		int result = reversed.reverse(-1233);
+		assertEquals(-3321, result);
+	}
+	@Test
+	void atoi1() {
+		StringToInteger atoi = new StringToInteger();
+		int result = atoi.myAtoi("1");
+		assertEquals(1, result);
+	}
+	@Test
+	void atoi2() {
+		StringToInteger atoi = new StringToInteger();
+		int result = atoi.myAtoi("-5642");
+		assertEquals(-5642, result);
+	}
+	@Test
+	void atoi3() {
+		StringToInteger atoi = new StringToInteger();
+		int result = atoi.myAtoi("10000000000000000000000000");
+		assertEquals(Integer.MAX_VALUE, result);
+	}
 	
 }

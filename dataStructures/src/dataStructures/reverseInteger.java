@@ -1,7 +1,7 @@
 package dataStructures;
 
 public class reverseInteger {
-	//Given a 32-bit signed integer, reverse digits of an integer.
+	//Given a 32-bit signed integer, reverse digits of an integer, where first digit is non-zero.
 	
 	public int reverse(int x) {
         long res = 0;

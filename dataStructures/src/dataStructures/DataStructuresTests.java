@@ -38,4 +38,5 @@ class DataStructuresTests {
 		int result = skyline.maxIncreaseKeepingSkyline(grid);
 		assertEquals(0, result);
 	}
+	
 }

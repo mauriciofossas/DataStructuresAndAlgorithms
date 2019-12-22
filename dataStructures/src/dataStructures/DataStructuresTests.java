@@ -7,6 +7,40 @@ import org.junit.jupiter.api.Test;
 class DataStructuresTests {
 
 	@Test
+	void sudoku1() {
+		validSudoku sudoku = new validSudoku();
+		char[][] board = {
+					  {'5','3','.','.','7','.','.','.','.'},
+					  {'6','.','.','1','9','5','.','.','.'},
+					  {'.','9','8','.','.','.','.','6','.'},
+					  {'8','.','.','.','6','.','.','.','3'},
+					  {'4','.','.','8','.','3','.','.','1'},
+					  {'7','.','.','.','2','.','.','.','6'},
+					  {'.','6','.','.','.','.','2','8','.'},
+					  {'.','.','.','4','1','9','.','.','5'},
+					  {'.','.','.','.','8','.','.','7','9'}
+					  };
+		boolean result = sudoku.isValidSudoku(board);
+		assertEquals(true, result);
+	}
+	@Test
+	void sudoku2() {
+		validSudoku sudoku = new validSudoku();
+		char[][] board = {
+					  {'5','3','.','.','7','.','.','.','.'},
+					  {'6','.','.','1','9','5','.','.','.'},
+					  {'.','9','3','.','.','.','.','6','.'},
+					  {'8','.','.','.','6','.','.','.','3'},
+					  {'4','.','.','8','.','3','.','.','1'},
+					  {'7','.','.','.','2','.','.','.','6'},
+					  {'.','6','.','.','.','.','2','8','.'},
+					  {'.','.','.','4','1','9','.','.','5'},
+					  {'.','.','.','.','8','.','.','7','9'}
+					  };
+		boolean result = sudoku.isValidSudoku(board);
+		assertEquals(false, result);
+	}
+	@Test
 	void anagramTest1() {
 		Anagram ana = new Anagram();
 		boolean result = ana.isAnagram("below", "elbow");

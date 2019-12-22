@@ -7,6 +7,18 @@ import org.junit.jupiter.api.Test;
 class DataStructuresTests {
 
 	@Test
+	void noRepetition1() {
+		NoRepetition nr = new NoRepetition();
+		int result = nr.lengthOfLongestSubstring("abcdefghijklmnopqrstuvwxyza");
+		assertEquals(26, result);
+	}
+	@Test
+	void noRepetition2() {
+		NoRepetition nr = new NoRepetition();
+		int result = nr.lengthOfLongestSubstring("aabbccddeeffghijaa");
+		assertEquals(6, result);
+	}
+	@Test
 	void sudoku1() {
 		validSudoku sudoku = new validSudoku();
 		char[][] board = {

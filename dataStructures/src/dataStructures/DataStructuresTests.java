@@ -2,10 +2,26 @@ package dataStructures;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 class DataStructuresTests {
 
+	@Test
+	void subset() {
+		Subsets subset = new Subsets();
+		int[] list = {1, 2, 3};
+		List<List<Integer>> result = subset.subsets(list);
+		List<List<Integer>> correct = Arrays.asList(
+				Arrays.asList(),
+				Arrays.asList(1), Arrays.asList(2), Arrays.asList(3), 
+				Arrays.asList(1, 2), Arrays.asList(1, 3), Arrays.asList(2, 3),
+				Arrays.asList(1, 2, 3));
+		assertEquals(true, new HashSet<>(result).equals(new HashSet<>(correct)));
+	}
 	@Test
 	void noRepetition1() {
 		NoRepetition nr = new NoRepetition();

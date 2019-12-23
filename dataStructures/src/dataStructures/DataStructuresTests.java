@@ -11,6 +11,27 @@ import org.junit.jupiter.api.Test;
 class DataStructuresTests {
 
 	@Test
+	void waterContainer() {
+		WaterContainer wc = new WaterContainer();
+		int[] container = {1,8,6,2,5,4,8,3,7};
+		int result = wc.maxArea(container);
+		assertEquals(49, result);
+	}
+	@Test
+	void waterContainer2() {
+		WaterContainer wc = new WaterContainer();
+		int[] container = {1,8,6,2,5,4,8,3,6};
+		int result = wc.maxArea(container);
+		assertEquals(42, result);
+	}
+	@Test
+	void waterContainer3() {
+		WaterContainer wc = new WaterContainer();
+		int[] container = {1,8,6,2,5,4,8,3,5};
+		int result = wc.maxArea(container);
+		assertEquals(40, result);
+	}
+	@Test
 	void subset() {
 		Subsets subset = new Subsets();
 		int[] list = {1, 2, 3};

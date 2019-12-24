@@ -11,6 +11,14 @@ import org.junit.jupiter.api.Test;
 class DataStructuresTests {
 
 	@Test
+	void twosum1() {
+		TwoSum ts = new TwoSum();
+		int[] nums = {7, 1, 3, 5, 2};
+		int[] result = ts.twoSum(nums, 9);
+		int[] correct = {0,4};
+		assertArrayEquals(result, correct);
+	}
+	@Test
 	void jumpGame1() {
 		JumpGame jg = new JumpGame();
 		int[] game = {2,3,1,1,4};

@@ -11,6 +11,20 @@ import org.junit.jupiter.api.Test;
 class DataStructuresTests {
 
 	@Test
+	void jumpGame1() {
+		JumpGame jg = new JumpGame();
+		int[] game = {2,3,1,1,4};
+		boolean result = jg.canJump(game);
+		assertEquals(true, result);
+	}
+	@Test
+	void jumpGame2() {
+		JumpGame jg = new JumpGame();
+		int[] game = {3,2,1,0,4};
+		boolean result = jg.canJump(game);
+		assertEquals(false, result);
+	}
+	@Test
 	void waterContainer() {
 		WaterContainer wc = new WaterContainer();
 		int[] container = {1,8,6,2,5,4,8,3,7};

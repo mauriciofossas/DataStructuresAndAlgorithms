@@ -11,6 +11,12 @@ import org.junit.jupiter.api.Test;
 class DataStructuresTests {
 
 	@Test
+	void stairs() {
+		Stairs st = new Stairs();
+		int result = st.climbStairs(10);
+		assertEquals(89, result);
+	}
+	@Test
 	void twosum1() {
 		TwoSum ts = new TwoSum();
 		int[] nums = {7, 1, 3, 5, 2};
